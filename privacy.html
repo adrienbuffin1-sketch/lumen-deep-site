@@ -1,0 +1,74 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Lumen Deep Privacy & Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600&family=Russo+One&display=swap">
+<style>
+/* Single dark look matching the game: one reading column, deep-water ground, lumen teal + gold accents */
+:root{
+  --abyss:#061a2b; --water:#0b3a52; --panel:#0d2a3e; --ink:#e8f6f7; --mute:#9cc0c6;
+  --lumen:#5ef2d6; --gold:#ffc857; --line:rgba(94,242,214,.18);
+  --display:"Russo One",system-ui,sans-serif; --body:"Oxanium",system-ui,sans-serif;
+  color-scheme:dark;
+}
+body{background:var(--abyss);background-image:radial-gradient(120% 50% at 50% 0%,var(--water),var(--abyss) 70%);background-attachment:fixed;color:var(--ink);font:400 17px/1.6 var(--body);padding-inline:20px;padding-block:0 64px}
+main{max-width:40rem;margin:0 auto}
+header{padding-block:56px 28px;border-bottom:1px solid var(--line)}
+.eyebrow{font:600 13px var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+h1{font:400 clamp(40px,9vw,60px)/1 var(--display);margin:.25em 0 .3em;color:var(--lumen);text-wrap:balance}
+.lede{color:var(--mute);margin:0}
+h2{font:400 24px/1.2 var(--display);margin:44px 0 10px;text-wrap:balance}
+h3{font:600 17px var(--body);margin:22px 0 4px;color:var(--lumen)}
+p,li{max-width:65ch}
+ul{padding-left:1.2em}li{margin:6px 0}
+.none{display:flex;gap:14px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:18px 0}
+.none b{font:400 18px var(--display);color:var(--gold);white-space:nowrap}
+.mail{display:inline-flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-weight:600;word-break:break-all;user-select:all}
+button{font:600 14px var(--body);color:var(--abyss);background:var(--lumen);border:0;border-radius:8px;padding:6px 12px;cursor:pointer}
+button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+</style></head><body>
+<main>
+  <header>
+    <div class="eyebrow">Lumen Deep · iPhone game</div>
+    <h1>Privacy &amp; Support</h1>
+    <p class="lede">Effective 8 October 2026. Lumen Deep is made by Adrien Buffin, an independent developer on the Gold Coast, Australia.</p>
+  </header>
+
+  <h2 id="privacy">Privacy policy</h2>
+  <div class="none"><b>0 data</b><span>Lumen Deep does not collect, store on a server, share or sell any personal information. There are no accounts, no ads, no analytics and no tracking.</span></div>
+
+  <h3>What stays on your phone</h3>
+  <p>Your progress (gold, upgrades, trophies, best scores and settings) is saved only on your device. It is never sent to us or anyone else. Deleting the app deletes this progress.</p>
+
+  <h3>Notifications</h3>
+  <p>If you allow notifications, the game schedules up to two local reminders on your phone, such as a dive of the day. They are created on the device, not sent from a server. You can turn them off in the game options or in iOS Settings › Notifications › Lumen Deep.</p>
+
+  <h3>Vibration</h3>
+  <p>The game uses your phone's haptics for hits and explosions. You can switch this off with the Shake option in the game.</p>
+
+  <h3>Third parties</h3>
+  <p>The game contains no third-party advertising, analytics or tracking code. It does not use the internet to play. Apple may collect information under its own policies when you download the app from the App Store.</p>
+
+  <h3>Children</h3>
+  <p>Because the game collects no personal information, it collects none from children either.</p>
+
+  <h3>Changes</h3>
+  <p>If this policy changes, the new version will be posted on this page with a new effective date.</p>
+
+  <h2 id="support">Support</h2>
+  <p>Found a bug or have an idea? Email me and include your iPhone model.</p>
+  <div class="mail"><span id="addr">adrienbuffin1@gmail.com</span><button id="copy" type="button">Copy</button></div>
+
+  <h3>My progress disappeared</h3>
+  <p>Progress lives only on your phone. It is lost if the app is deleted or the phone is reset without a backup.</p>
+  <h3>I don't want reminders</h3>
+  <p>Turn reminders off in the game options, or in iOS Settings › Notifications › Lumen Deep.</p>
+  <h3>The game feels slow</h3>
+  <p>Close other apps and turn off Low Power Mode.</p>
+
+  <footer>© 2026 Adrien Buffin. Lumen Deep.</footer>
+</main>
+<script>
+document.getElementById('copy').addEventListener('click',async e=>{const t=document.getElementById('addr').textContent;
+  try{await navigator.clipboard.writeText(t);e.target.textContent='Copied';}catch(_){const r=document.createRange();r.selectNodeContents(document.getElementById('addr'));const s=getSelection();s.removeAllRanges();s.addRange(r);}});
+</script>
+</body></html>
